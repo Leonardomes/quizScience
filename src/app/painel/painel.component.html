@@ -1,0 +1,63 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-6">
+        <app-progresso [progresso]="progresso"></app-progresso>
+      </div>
+      <div class="col-sm-6">
+        <div class="d-flex justify-content-end">
+          <app-tentativas [tentativas]="tentativas"></app-tentativas>
+        </div>
+      </div>
+    </div>
+
+    <!--div class="row">
+      <div class="col">
+        <h6> {{instrucao}} </h6>
+        <p>{{rodadaFrases.Pergunta}}</p>
+
+        <div class="form-group">
+          <textarea
+          class="form-control"
+          rows="3"
+          (input)="atualizaResposta($event)"
+          [value]="resposta"
+          ></textarea>
+        </div>
+      </div>
+    </div-->
+
+    <div>
+      <fieldset>
+        <h6 style="color: blue;"> {{rodadaFrases.Pergunta}} </h6>
+        <hr />
+        <label class="teste"><input type='radio' name='option' value='{{arraytesteteste[0]}}' (change)="atualizaResposta($event)">{{arraytesteteste[0]}}</label>
+        <hr />
+        <label class="teste"><input type='radio'  name='option' value='{{arraytesteteste[1]}}' (change)="atualizaResposta($event)">{{arraytesteteste[1]}}</label>
+        <hr />
+        <label class="teste"><input type='radio' name='option' value='{{arraytesteteste[2]}}' (change)="atualizaResposta($event)">{{arraytesteteste[2]}}</label>
+        <hr />
+        <label class="teste"><input type='radio' name='option' value='{{arraytesteteste[3]}}' (change)="atualizaResposta($event)">{{arraytesteteste[3]}}</label>
+        <hr />
+      </fieldset>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-end">
+          <button
+          id="botao"
+          type="button"
+          class="btn btn-primary"
+          (click)="verificarResposta()"
+          >Verificar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
